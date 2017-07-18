@@ -5,7 +5,7 @@ var message = "Weather",
   x, y; // x and y coordinates of the text
 
 function preload() {
-  font = loadFont('assets/LeagueGothic-Regular.otf');
+  font = loadFont('assets/RobotoSlab-Bold.ttf');
 }
 
 function setup() {
