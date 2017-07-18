@@ -1,7 +1,7 @@
 
 
 
-var message = text,
+var message = "Weather",
   font,
   bounds, // holds x, y, w, h of the text's bounding box
   fontsize = 60,
