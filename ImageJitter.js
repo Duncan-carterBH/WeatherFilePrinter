@@ -5,16 +5,15 @@ var message = text,
   font,
   bounds, // holds x, y, w, h of the text's bounding box
   fontsize = 60,
-  x, y,
-  textRect; // x and y coordinates of the text
+  x, y; // x and y coordinates of the text
 
 function preload() {
   font = loadFont('assets/RobotoSlab-Bold.ttf');
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-
+  var c = createCanvas(windowWidth, windowHeight);
+  c.drop(gotFile);
   // set up the font
   textFont(font);
   textSize(fontsize);
@@ -23,13 +22,13 @@ function setup() {
   bounds = font.textBounds(message, 0, 0, fontsize);
   x = width / 2 - bounds.w / 2;
   y = height / 2 - bounds.h / 2;
-  textRect.drop(gotFile);
+  
 }
 
 function gotFile(file) {
   var img = createImg(file.data).hide();
   // Draw the image onto the canvas
-  image(img, x, y, width, height);
+  image(img, 0, 0, width, height);
 }
 
 function draw() {
@@ -42,7 +41,6 @@ function draw() {
   fill(0);
   text(message, x, y);
   bounds = font.textBounds(message,x,y,fontsize);
-  textRect = rect(x,y,100,100);
 
   // check if the mouse is inside the bounding box and tickle if so
   if ( mouseX >= bounds.x && mouseX <= bounds.x + bounds.w &&
