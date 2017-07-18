@@ -1,31 +1,13 @@
-// for red, green, and blue color values
-var r, g, b;
-
 function setup() {
-  createCanvas(720, 400);
-  // Pick colors randomly
-  r = random(255);
-  g = random(255);
-  b = random(255);
+createCanvas(720,400);
+background(200);
 }
 
 function draw() {
   background(127);
   // Draw a circle
   strokeWeight(2);
-  stroke(r, g, b);
-  fill(r, g, b, 127);
+  stroke(0,0,0);
+  fill(50,50,50);
   ellipse(360, 200, 200, 200);
-}
-
-// When the user clicks the mouse
-function mousePressed() {
-  // Check if mouse is inside the circle
-  var d = dist(mouseX, mouseY, 360, 200);
-  if (d < 100) {
-    // Pick new random color values
-    r = random(255);
-    g = random(255);
-    b = random(255);
-  }
 }
