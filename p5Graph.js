@@ -14,7 +14,7 @@ function p5Graph(jsonIn) {
 	function setup(){
 	
 		/* createCanvas(displayWidth,400); */
-		var programme = data.programme;
+		var programme = data.description;
 		//var place = data._location;
 		createP(programme);
 	/* 	lengths = [programme.length];
