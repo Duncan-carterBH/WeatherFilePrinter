@@ -15,7 +15,7 @@
 		<script type="text/javascript" src="p5Graph.js"></script>
 		<script>
 		
-			var url;
+			var url, url2;
 			var epw = {};
 			var json = {};
 			
@@ -23,7 +23,8 @@
 				
 				url = "https://raw.githubusercontent.com/Duncan-carterBH/WeatherFilePrinter/master/assets/GBR_London.Gatwick.037760_IWEC.epw";
 				epw = loadStrings(url);
-				json = loadJSON(epw2json2(epw));
+				url2 = "https://raw.githubusercontent.com/dariusk/corpora/master/data/governments/mass-surveillance-project-names.json";
+				json = loadJSON(url2);
 				
 		
 		
